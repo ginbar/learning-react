@@ -1,0 +1,25 @@
+.summary {
+    background-color: rgb(247, 247, 247);
+    height: 100%;
+    width: 100%;
+}
+
+
+.summary ul {
+    list-style-type: decimal;
+}
+
+.summary ul li {
+    color: #1a1a1a;
+
+}
+
+.summary ul li :hover{
+    color: #6d6d6d;
+    text-decoration-color: #6d6d6d; 
+}
+
+.summary ul li a {
+    color: inherit;
+    text-decoration: none;
+}

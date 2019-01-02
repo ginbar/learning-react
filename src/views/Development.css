@@ -1,0 +1,22 @@
+.development-view {
+
+}
+
+.development-view div {
+    display: inline-block;
+}
+
+.development-content {
+    right: 0;
+    width: 65%;
+}
+
+.development-content h1 {
+    font-size: 350%;
+}
+
+.development-summary {
+    right: 0;
+    width: 30%;
+    position: fixed;
+}

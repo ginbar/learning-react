@@ -1,0 +1,47 @@
+header {
+    /* position: fixed; */
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    min-height: 20px
+}
+
+.header-title {
+    font-size: 70%;
+}
+
+.header-title, .header-nav {
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline;
+    margin: 15px 10px 15px 10px;
+}
+
+nav ul li:hover {
+    color: #61dafb;
+}
+
+nav ul li a {
+    color: inherit;
+    text-decoration: none; 
+}
+
+header h1 {
+    color: #61dafb;
+    bottom: 0;
+}
+
+header h2 {
+    top: 0;
+    font-size: 90%;
+}
