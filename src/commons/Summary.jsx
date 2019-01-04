@@ -1,14 +1,21 @@
-import React from "react";
+import React, { Component } from "react";
 
-import './Summary.css'
+import './Summary.css';
 
-export default function Summary({ title, routes }) {
+export default function Summary({ title, routes, mode = 'hash' }) {
+
+    const path = mode === 'hash'
+        ? window.location.hash.replace('#', '') || '/'
+        : window.location.pathname;
+
     return (
         <div className="summary">
-            <h2>{title}</h2>
+            <h1>{title}</h1>
             <ul>
                 {routes.map(({ text, link }) =>
-                    (<li key={link}><a href={`#${link}`}>{text}</a></li>))}
+                    (<li key={link} className={link === path ? 'selected' : ''}>
+                        <a href={`#${link}`}>{text}</a>
+                    </li>))}
             </ul>
         </div>
     );

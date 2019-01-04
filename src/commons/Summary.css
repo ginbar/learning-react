@@ -4,15 +4,23 @@
     width: 100%;
 }
 
+.summary h1 {
+    text-align: center;
+}
 
 .summary ul {
-    list-style-type: decimal;
+    list-style-type: none;
 }
 
 .summary ul li {
     color: #1a1a1a;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+/* .summary ul .selected {
+    color: aquamarine;
+} */
 
 .summary ul li :hover{
     color: #6d6d6d;
