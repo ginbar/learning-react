@@ -1,5 +1,7 @@
 import React, { Component, Children } from "react";
 
+import "./ComponentList.css";
+
 export default class ComponentList extends Component {
 
     constructor(props) {
@@ -8,7 +10,7 @@ export default class ComponentList extends Component {
 
     render() {
         return (
-            <ul>
+            <ul className="component-list">
                 {Children.map(this.props.children, (child, index) => (
                     <li key={index}>{child}</li>
                 ))}

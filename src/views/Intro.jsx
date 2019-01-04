@@ -6,7 +6,7 @@ export default function Intro(props) {
             {/* <header>
             </header> */}
             <h1>Intro</h1>
-            <h2>A small introduction to this page and it's content.</h2>
+            <h2>A small introduction to this page and its content.</h2>
 
             <p>Welcome to <span>Learining React</span>. This app is the product
             of my studies with React.js and each section describes some of my experiences

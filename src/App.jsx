@@ -6,7 +6,7 @@ import Footer from "./template/Footer.jsx";
 
 import Development from "./views/Development";
 import Components from "./views/Components";
-import About from "./views/About";
+import Redux from "./views/Redux";
 import NotFound from "./views/NotFound";
 
 import './App.css';
@@ -21,7 +21,7 @@ export default function App(props) {
                     navRoutes={[
                         { text: 'Development', link: '/development' },
                         { text: 'Components', link: '/components' },
-                        { text: 'About', link: '/about' },]}>
+                        { text: 'Redux', link: '/redux' },]}>
                 </Header>
                 <div className="view-content">
                     <div className="inner-content">
@@ -31,7 +31,7 @@ export default function App(props) {
                                 { link: '/', view: Development },
                                 { link: '/development', view: Development },
                                 { link: '/components', view: Components },
-                                { link: '/about', view: About },
+                                { link: '/redux', view: Redux },
                             ]}
                             otherwise={NotFound}>
                         </Router>

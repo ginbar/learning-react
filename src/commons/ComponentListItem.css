@@ -1,0 +1,15 @@
+.component-list-item {
+    width: 100%;
+}
+
+.component-list-item div {
+    display: inline-block;
+}
+
+.component-list-item .text {
+    width: 80%;
+}
+
+.component-list-item .component {
+    width: 20%;
+}
