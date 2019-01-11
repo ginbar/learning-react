@@ -8,7 +8,7 @@ import Clock from "../commons/Clock";
 export default function Components(props) {
     return (
         <div>
-            <p style={{ 'text-align': 'center' }}>
+            <p style={{ textAlign: 'center' }}>
                 This section contains a list of small components
                 I've built using with React.
             </p>

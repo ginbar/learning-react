@@ -29,11 +29,13 @@ nav ul li{
 
 nav ul li:hover {
     color: #61dafb;
+    cursor: pointer; 
 }
 
 nav ul li a {
     color: inherit;
-    text-decoration: none; 
+    text-decoration: none;
+    height: 100%; 
 }
 
 header h1 {
@@ -44,4 +46,10 @@ header h1 {
 header h2 {
     top: 0;
     font-size: 90%;
+}
+
+.link-selected {
+    line-height: 1.15;    
+    text-decoration: underline;
+    text-decoration-color: #61dafb;
 }

@@ -6,4 +6,11 @@ footer {
     padding-bottom: 50px;
 }
 
+footer .inner-content h2 {
+    color: #999;
+}
 
+.copy-left {
+    display: inline-block;
+    transform: rotateY(180deg);
+}

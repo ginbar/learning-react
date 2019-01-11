@@ -36,3 +36,16 @@ body {
     background-color: #20232a;
     color: white;
 }
+
+.no-style-link-list {
+    list-style-type: none;
+}
+
+.no-style-link-list li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.pointer-on-hover {
+    cursor: pointer;
+}

@@ -10,9 +10,12 @@ export default function Footer(props) {
     return (
         <footer className="template">
             <div className="inner-content">
-                <h2>
-                    Learning React {(new Date()).getFullYear()}
-                </h2>
+                <h1>
+                    Learning React&nbsp; 
+                    <span className="copy-left">&copy;</span>&nbsp; 
+                    {(new Date()).getFullYear()}
+                </h1>
+                <h2>Powered by</h2>
                 <PoweredBy links={[
                     {
                         text: 'React',
@@ -23,6 +26,7 @@ export default function Footer(props) {
                         url: 'https://www.heroku.com/'
                     },
                 ]}></PoweredBy>
+                <h2>Channels</h2>
                 <SocialMedia links={[
                     {
                         text: 'GitHub',
