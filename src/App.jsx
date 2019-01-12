@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Header from "./template/Header.jsx";
-import Router from "./template/Router";
+import BrowserRouter from "./template/BrowserRouter";
 import Footer from "./template/Footer.jsx";
 
 import Development from "./views/Development";
@@ -16,19 +16,17 @@ export default function App(props) {
     return (
         <div className="app">
             <div className="content">
-                <div className="inner-content">
-                    <Header
-                        title="Learning React"
-                        navRoutes={[
-                            { text: 'Development', link: '/development' },
-                            { text: 'Components', link: '/components' },
-                            { text: 'Redux', link: '/redux' },
-                            { text: 'React Native', link: '/reactnative' }]}>
-                    </Header>
-                </div>
+                <Header
+                    title="Learning React"
+                    navRoutes={[
+                        { text: 'Development', link: '/development' },
+                        { text: 'Components', link: '/components' },
+                        { text: 'Redux', link: '/redux' },
+                        { text: 'React Native', link: '/reactnative' }]}>
+                </Header>
                 <div className="view-content">
                     <div className="inner-content">
-                        <Router
+                        <BrowserRouter
                             mode="url"
                             routes={[
                                 { link: '/', view: Development },
@@ -38,7 +36,7 @@ export default function App(props) {
                                 { link: '/reactnative', view: ReactNative }
                             ]}
                             otherwise={NotFound}>
-                        </Router>
+                        </BrowserRouter>
                     </div>
                 </div>
                 <Footer></Footer>

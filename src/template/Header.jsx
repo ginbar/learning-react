@@ -12,7 +12,8 @@ export default function Header({ title, subtitle, navRoutes }) {
 
     return (
         <header className="template">
-            <div className="header-title">
+            <div className="inner-content">
+                <div className="header-title">
                     <h1 className="pointer-on-hover"
                         onClick={handleClick.bind(null, '/')}>
                         {title}
@@ -31,6 +32,7 @@ export default function Header({ title, subtitle, navRoutes }) {
                         </ul>
                     </nav>
                 </div>
+            </div>
         </header>
     );
 };
