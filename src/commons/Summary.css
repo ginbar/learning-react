@@ -18,9 +18,9 @@
     margin-bottom: 10px;
 }
 
-/* .summary ul .selected {
-    color: aquamarine;
-} */
+.summary ul .selected {
+    font-weight: bold;
+}
 
 .summary ul li :hover{
     color: #6d6d6d;

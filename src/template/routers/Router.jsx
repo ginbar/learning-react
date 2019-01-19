@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 
 /**
- * 
+ * Base class for every router.
  */
 export default class Router extends Component {
 

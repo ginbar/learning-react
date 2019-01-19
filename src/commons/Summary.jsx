@@ -1,34 +1,48 @@
 import React, { Component } from "react";
+import HashChangeListener from "../utils/HashChangeListener";
 
 import './Summary.css';
 
-export default class Summary extends Component {
+
+/**
+ * Summary
+ */
+class Summary extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            hash: window.location.hash.replace('#', '') || '/'
+        };
     }
 
-    componentDidMount() {
-        // window.addEventListener('')
+    
+    onHashchange(event) {
+        const [_, hash] = event.newURL.split('#');
+        this.setState({ hash: hash });
     }
+
 
     render() {
 
-        const { title, routes, mode = 'hash' } = this.props;
-        const path = mode === 'hash'
-            ? window.location.hash.replace('#', '') || '/'
-            : window.location.pathname;
-
         return (
             <div className="summary">
-                <h1>{title}</h1>
+                <h1>{this.props.title}</h1>
                 <ul>
-                    {routes.map(({ text, link }) =>
-                        (<li key={link} className={link === path ? 'selected' : ''}>
+                    {this.props.routes.map(({ text, link }) =>
+                        (<li key={link}
+                            className={link === this.state.hash ? 'selected' : ''}>
                             <a href={`#${link}`}>{text}</a>
                         </li>))}
                 </ul>
             </div>
         );
     }
-};
+
+}
+
+// Mixing with HashChangeListener
+Object.assign(Summary.prototype, HashChangeListener);
+
+export default Summary;

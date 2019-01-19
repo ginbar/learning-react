@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import Header from "./template/Header.jsx";
+import Header from "./template/Header";
 import BrowserRouter from "./template/routers/BrowserRouter";
-import Footer from "./template/Footer.jsx";
+import Footer from "./template/Footer";
 
 import Development from "./views/Development";
 import Components from "./views/Components";
