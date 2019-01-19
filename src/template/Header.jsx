@@ -3,7 +3,7 @@ import React from "react";
 import './Header.css';
 import '../App.css';
 
-export default function Header({ title, subtitle, navRoutes }) {
+export default function Header({ title, subtitle, navRoutes, titleLink }) {
 
     function handleClick(url) {
         window.history.pushState({}, '', url);
@@ -15,7 +15,7 @@ export default function Header({ title, subtitle, navRoutes }) {
             <div className="inner-content">
                 <div className="header-title">
                     <h1 className="pointer-on-hover"
-                        onClick={handleClick.bind(null, '/')}>
+                        onClick={handleClick.bind(null, titleLink)}>
                         {title}
                     </h1>
                     <h2>{subtitle}</h2>

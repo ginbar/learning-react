@@ -1,7 +1,7 @@
 import React from "react";
 
 import Summary from "../commons/Summary";
-import HashRouter from "../template/HashRouter";
+import HashRouter from "../template/routers/HashRouter";
 
 import Intro from "./Intro";
 

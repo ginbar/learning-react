@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Header from "./template/Header.jsx";
-import BrowserRouter from "./template/BrowserRouter";
+import BrowserRouter from "./template/routers/BrowserRouter";
 import Footer from "./template/Footer.jsx";
 
 import Development from "./views/Development";
@@ -18,6 +18,7 @@ export default function App(props) {
             <div className="content">
                 <Header
                     title="Learning React"
+                    titleLink="/"
                     navRoutes={[
                         { text: 'Development', link: '/development' },
                         { text: 'Components', link: '/components' },
@@ -27,7 +28,6 @@ export default function App(props) {
                 <div className="view-content">
                     <div className="inner-content">
                         <BrowserRouter
-                            mode="url"
                             routes={[
                                 { link: '/', view: Development },
                                 { link: '/development', view: Development },
