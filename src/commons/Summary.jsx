@@ -17,7 +17,7 @@ class Summary extends Component {
         };
     }
 
-    
+
     onHashchange(event) {
         const [_, hash] = event.newURL.split('#');
         this.setState({ hash: hash });
@@ -25,16 +25,18 @@ class Summary extends Component {
 
 
     render() {
-
         return (
             <div className="summary">
                 <h1>{this.props.title}</h1>
-                <ul>
-                    {this.props.routes.map(({ text, link }) =>
-                        (<li key={link}
-                            className={link === this.state.hash ? 'selected' : ''}>
-                            <a href={`#${link}`}>{text}</a>
-                        </li>))}
+                <ul>{this.props.routes.map(({ text, link }, index) =>
+                    (<li key={link}
+                        className={link === this.state.hash
+                            // If the hash hasn't been set 
+                            || this.state.hash === '/' && index === 0
+                            ? 'selected'
+                            : ''}>
+                        <a href={`#${link}`}>{text}</a>
+                    </li>))}
                 </ul>
             </div>
         );
