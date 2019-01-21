@@ -31,7 +31,8 @@ class Summary extends Component {
                 <ul>{this.props.routes.map(({ text, link }, index) =>
                     (<li key={link}
                         className={link === this.state.hash
-                            // If the hash hasn't been set 
+                            // If the hash hasn't been set, the
+                            // first link is marked as selected 
                             || this.state.hash === '/' && index === 0
                             ? 'selected'
                             : ''}>

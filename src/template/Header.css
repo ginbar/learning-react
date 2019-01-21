@@ -24,7 +24,7 @@ nav ul {
 
 nav ul li{
     display: inline;
-    margin: 15px 10px 15px 10px;
+    padding: 15px 10px 15px 10px;
 }
 
 nav ul li:hover {
@@ -48,8 +48,8 @@ header h2 {
     font-size: 90%;
 }
 
-.link-selected {
-    line-height: 1.15;    
-    text-decoration: underline;
-    text-decoration-color: #61dafb;
+.selected-link {
+    line-height: 1.3;    
+    border-bottom: 2px solid currentColor;
+    color: #61dafb;
 }

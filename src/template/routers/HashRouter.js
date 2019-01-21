@@ -11,7 +11,7 @@ import HashChangeListener from "../../utils/HashChangeListener";
         super(props);
         
         this.state = {
-            link: location.hash.replace('#', '') || '/'
+            link: window.location.hash.replace('#', '') || '/'
         };        
     }
 

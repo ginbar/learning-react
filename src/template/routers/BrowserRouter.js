@@ -1,35 +1,29 @@
 import Router from './Router';
+import PushStateListener from "../../utils/PushStateListener";
 
 
 /**
  * A class for routing using the browser.
  */
-export default class BrowserRouter extends Router {
+class BrowserRouter extends Router {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            link: location.pathname || '/'
+            link: window.location.pathname || '/'
         };
-
-        this.onPushState = this.onPushState.bind(this);
     }
 
 
-    componentDidMount() {
-        window.addEventListener('pushState', this.onPushState);
-    }
-
-
-    componentWillUnmount() {
-        window.removeEventListener('pushState', this.onPushState);
-    }
-
-
-    onPushState(event) {
+    onPushstate(event) {
         event.preventDefault();
         this.setState({ link: location.pathname });
     }
 
 };
+
+// Mixing with PushStateListener
+Object.assign(BrowserRouter.prototype, PushStateListener);
+
+export default BrowserRouter;

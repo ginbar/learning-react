@@ -18,7 +18,7 @@ export default function App(props) {
             <div className="content">
                 <Header
                     title="Learning React"
-                    titleLink="/"
+                    titleRoute={{ text: 'Route', link: '/' }}
                     navRoutes={[
                         { text: 'Development', link: '/development' },
                         { text: 'Components', link: '/components' },
