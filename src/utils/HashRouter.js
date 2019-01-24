@@ -1,5 +1,5 @@
 import Router from './Router';
-import HashChangeListener from "../../utils/HashChangeListener";
+import HashChangeListener from "./HashChangeListener";
 
 
 /**

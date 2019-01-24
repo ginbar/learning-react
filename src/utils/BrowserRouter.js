@@ -1,5 +1,5 @@
 import Router from './Router';
-import PushStateListener from "../../utils/PushStateListener";
+import PushStateListener from "./PushStateListener";
 
 
 /**
