@@ -22,6 +22,10 @@
     font-weight: bold;
 }
 
+.selected a {
+    outline: 0;
+}
+
 .summary ul li :hover{
     color: #6d6d6d;
     text-decoration-color: #6d6d6d; 

@@ -19,7 +19,6 @@ class Header extends Component {
     handleClick({ link, text }) {
         window.history.pushState({}, text, link);
         window.dispatchEvent(new Event('pushstate'));
-        this.setState({ path: link });
     }
 
 
